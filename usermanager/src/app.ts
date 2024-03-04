@@ -2,12 +2,20 @@ import express, { Express, Request, Response } from 'express';
 import path from 'path';
 import ejs from 'ejs';
 import dotenv from 'dotenv';
+import cors, { CorsOptions } from 'cors';
+
+const corsOptions: CorsOptions = {
+    origin: 'https://super-duper-succotash-69pxx9vp44rfgjv-8040.app.github.dev/',
+    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
+    optionsSuccessStatus: 200
+};
+
 
 dotenv.config();
 
 const app: Express = express();
 const port = Number(process.env['PORT']) || 3000;
-
+app.use(cors());
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 

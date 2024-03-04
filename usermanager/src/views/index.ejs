@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usermanager demo</title>
+    <link rel="stylesheet" type="text/css" href="/codebase/webix/webix.css">
+    <script src="/codebase/webix/webix.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/codebase/usermanager.css">
+    <script src="/codebase/usermanager.js"></script>
+</head>
+<body>
+    <script>
+        webix.ready(function() {
+            // use custom scrolls, optional
+            webix.CustomScroll.init();
+        
+            var app = new userManager.App({
+                url: "https://super-duper-succotash-69pxx9vp44rfgjv-8040.app.github.dev/",
+            });
+            app.render(document.body);
+        });
+    </script>
+</body>
+</html>
