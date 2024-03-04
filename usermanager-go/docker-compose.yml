@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  usermanager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8040:8040/tcp"
+    # volumes:
+    #   ./config.yml:/app/
+    entrypoint: [ "/app/usermanager" ]
